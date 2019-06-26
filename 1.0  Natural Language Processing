@@ -1,0 +1,66 @@
+11:09 26-6-2019
+
+Natural Language Processing
+ - Field of study on making sense of language
+ - Using statistics and computers
+
+Basics of NLP:
+ - Topic identifications
+ - text classifications
+
+NLP applications:
+ - Chatbots
+ - Translations
+ - sentiment analysis.
+
+# What exactly are regular expressions.
+ - They are stirngs with a special syntax
+ - Allow us to match patterns and find other strings
+ - find links in web page
+ - find emails address, remove/replace unwanted characters
+
+# from python library
+
+import re
+re.match('abc', 'abcdef')
+output : <_sre.SRE_MATCH object; span = (0, 3), match='abc'>
+
+In [3]: word_regex = '\w+'
+In [4]: re.match(word_regex, 'hi there!')  
+Out[4]: <_sre.SRE_Match object; span=(0, 2), match='hi'>
+
+Common Regex patterns (2)
+pattern	matches	example
+\w+	word	'Magic'
+\d	digit	9
+
+PythonCommon regex patterns (3)
+pattern	matches	example
+\w+	word	'Magic'
+\d	digit	9
+\s	space	' '
+
+Common regex patterns (5)
+pattern	matches	example
+\w+	word	'Magic'
+\d	digit	9
+\s	space	' '
+.*	wildcard	'username74'
++ or *	greedy match	'aaaaaa'
+\S	not space	'no_spaces'
+[a-z]	lowercase group	'abcdefg'
+
+
+Python's re Module
+re module
+split: split a string on regex
+findall: find all patterns in a string
+search: search for a pattern
+match: match an entire string or substring based on a pattern
+
+SYntax:
+Pattern first, and the string second
+
+May return an iterator, string, or match object
+ In [5]: re.split('\s+', 'Split on spaces.')
+Out[5]: ['Split', 'on', 'spaces.']
